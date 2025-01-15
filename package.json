@@ -2,7 +2,7 @@
   "name": "treinamento",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Dudu2231.github.io/ToDoList",
+  "homepage": "https://Dudu2231.github.io/Lista_Tarefas",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
