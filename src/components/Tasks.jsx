@@ -1,7 +1,12 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Tasks(){
-    const [tasks, setTask] = useState([])
+    const [tasks, setTask] = useState(()=>{
+        const savedTasks = localStorage.getItem("tasks")
+        return savedTasks ? JSON.parse(savedTasks) : []
+    })
+
+    useEffect(() => { localStorage.setItem('tasks', JSON.stringify(tasks)); }, [tasks])
 
     function addTask(event){
         const item = document.getElementById("item").value
